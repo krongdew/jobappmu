@@ -25,7 +25,7 @@ const index = () => {
       <MobileMenu />
       {/* End MobileMenu */}
 
-      <Hero9 />
+      <Hero9/>
       {/* <!-- End Hero Section --> */}
 
       <section className="job-section">
