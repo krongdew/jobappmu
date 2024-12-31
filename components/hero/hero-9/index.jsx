@@ -1,14 +1,18 @@
+'use client'
 import SearchForm4 from "../../common/job-search/SearchForm4";
 import Funfact2 from "../../fun-fact-counter/Funfact2";
 import Image from "next/image";
+import Homebutton from "../../button/Homebutton";
+import { useTranslations } from 'next-intl';
 
 const index = () => {
+  const t = useTranslations("Hero");
   return (
     <section
       className="banner-section-nine"
-      style={{ backgroundImage: "linear-gradient(158deg, rgba(146,173,238,1) 10%, rgba(254,241,188,1) 44%, rgba(255,0,110,1) 100%)",paddingTop:200 }}
+      style={{ backgroundColor:"#ff006e",paddingTop:200 }}
 
-
+    
     >
       <div className="auto-container">
         <div className="cotnent-box">
@@ -19,21 +23,19 @@ const index = () => {
           height={400}
           src="/images/icons/Jlogopng.png"
           alt="hero image"
+         
         />
             {/* <h3 style={{color:"#3863a9"}}>15,000+ Browse Jobs</h3> */}
             <div className="text">
-              Find Jobs, Employment & Career Opportunities
+              
+              {t('DiscirptionWeb')}
             </div>
           </div>
 
           {/* <!-- Job Search Form --> */}
-          <div
-            className="job-search-form"
-            data-aos-delay="500"
-            data-aos="fade-up"
-          >
-            <SearchForm4 />
-          </div>
+      
+            <Homebutton />
+         
         </div>
         {/* <!-- Job Search Form --> */}
 

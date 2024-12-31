@@ -12,8 +12,12 @@ import Block5 from "../block/Block5";
 import JobFeatured12 from "../job-featured/JobFeatured12";
 import LoginPopup from "../common/form/login/LoginPopup";
 import MobileMenu from "../header/MobileMenu";
+import { useTranslations } from 'next-intl';
+import Image from "next/image";
 
 const index = () => {
+  const t = useTranslations("Common");
+
   return (
     <>
       <LoginPopup />
@@ -68,7 +72,7 @@ const index = () => {
       </section>
       {/* End Job Categorie Section */}
 
-      <section className="candidates-section">
+      {/* <section className="candidates-section">
         <div className="auto-container">
           <div className="sec-title">
             <h2>Featured Candidates</h2>
@@ -83,19 +87,27 @@ const index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <!-- End Candidates Section --> */}
 
       <section
         className="testimonial-section style-two alternate"
-        style={{ backgroundImage: "url(/images/background/9.png)" }}
+        style={{ backgroundColor: "#ff006e" }}
       >
         <div className="auto-container">
           {/* <!-- Sec Title --> */}
           <div className="sec-title light text-center">
-            <h2>Testimonials From Our Customers</h2>
+            <h2>
+            <Image
+          width={30}
+          height={30}
+          src="/images/icons/SDG Wheel_Transparent_WEB.png"
+          alt="hero image"
+         
+        />
+                 {t('About SGDs')}</h2>
             <div className="text">
-              Lorem ipsum dolor sit amet elit, sed do eiusmod tempor
+            {t('MU JobSphere Description')}
             </div>
           </div>
 
@@ -112,16 +124,16 @@ const index = () => {
       {/* <!-- End Testimonial Section --> */}
 
       {/* <!-- Fun Fact Section --> */}
-      <div className="fun-fact-section style-two">
+      {/* <div className="fun-fact-section style-two">
         <div className="auto-container">
           <div className="row" data-aos="fade-in">
             <Funfact />
           </div>
         </div>
-      </div>
+      </div> */}
       {/* <!-- Fun Fact Section --> */}
 
-      <section className="news-section">
+      {/* <section className="news-section">
         <div className="auto-container">
           <div className="sec-title text-center">
             <h2>Recent News Articles</h2>
@@ -129,12 +141,14 @@ const index = () => {
               Fresh job related news content posted each day.
             </div>
           </div>
-          {/* End ."sec-title */}
+          
           <div className="row" data-aos="fade-up">
             <Blog />
           </div>
         </div>
-      </section>
+      </section> */}
+
+      
       {/* <!-- End News Section --> */}
 
       <CallToAction6 />

@@ -1,0 +1,56 @@
+{
+  "Common" : {
+  "Home": "Home",
+  "Find Jobs": "Find Jobs",
+  "Employers": "Employers",
+  "Candidates": "Candidates",
+  "Pages": "Pages",
+  "Language": "Language",
+  "Login / Register": "Login / Register",
+  "Job Post": "Job Post",
+  "About SGDs": "About SGDs",
+  "MU JobSphere Description": "MU JobSphere Promote and drive sustainable development goals"
+  },
+  "LanguageSwitcher": {
+    "thai": "Thai",
+    "english": "English"
+  },
+  "Hero":{
+  "DiscirptionWeb":"Find Jobs, Employment & Career Opportunities",
+  "For":"For",
+  "Hiring":"Hiring",
+  "Find a job":"Find a job",
+  "Mahidol student only":"Mahidol student only"
+  },
+  "funfact": {
+    "space": {
+      "1": "Advertising Space 1",
+      "2": "Advertising Space 2",
+      "3": "Advertising Space 3",
+      "4": "Advertising Space 4"
+    }
+  },
+  "testimonials": {
+    "1": {
+      "feedback": "ส่งเสริมเศรษฐกิจ",
+      "feedbackText": "ส่งเสริมเศรษฐกิจผ่านการสร้างงานที่ปลอดภัย และมีคุณค่า  "
+    },
+    "2": {
+      "feedback": "เพิ่มรายได้",
+      "feedbackText": "เพิ่มรายได้ให้ครัวเรือน เพื่อเพิ่มคุณภาพชีวิต  "
+    }, 
+    "3": {
+      "feedback": "สร้างหลักประกัน",
+      "feedbackText": "สร้างหลักประกันของความเท่าเทียมทางการศึกษาให้นักศึกษามหิดล โดยเฉพาะกลุ่มเปราะบางให้มีทุนทรัพย์ที่เพียงพอ สามารถสำเร็จการศึกษาได้อย่างเต็มคุณภาพ"
+    }, 
+    "4": {
+      "feedback": "สร้างความเข้มแข็ง",
+      "feedbackText": "สร้างความเข้มแข็งให้ชุมชนมหิดล ด้วยการส่งเสริมการจ้างงาน"
+    }, 
+    "5": {
+      "feedback": "สร้างความสัมพันธ์อันดี",
+      "feedbackText": "สร้างความสัมพันธ์อันดีกับภาคธุรกิจ และส่งเสริมอัตราการจ้างงานเต็มเวลาเมื่อนักศึกษาจบการศึกษาต่อไป"
+    }
+    
+  }
+}

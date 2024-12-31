@@ -1,13 +1,14 @@
-
 'use client'
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import HeaderNavContent from "../header/HeaderNavContent";
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
+  const t = useTranslations("Common");
 
   const changeBackground = () => {
     if (window.scrollY >= 10) {
@@ -37,9 +38,9 @@ const Header = () => {
               <div className="logo">
                 <Link href="/">
                   <Image
-                    width={154}
-                    height={50}
-                    src="/images/logo-2.svg"
+                    width={40}
+                    height={40}
+                    src="/images/favicon.png"
                     alt="brand"
                   />
                 </Link>
@@ -60,13 +61,13 @@ const Header = () => {
                 data-bs-toggle="modal"
                 data-bs-target="#loginPopupModal"
               >
-                Login / Register
+                {t('Login / Register')}
               </a>
               <Link
                 href="/employers-dashboard/post-jobs"
                 className="theme-btn btn-style-five"
               >
-                Job Post
+                {t('Job Post')}
               </Link>
             </div>
           </div>

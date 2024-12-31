@@ -16,8 +16,12 @@ import {
   isActiveParentChaild,
 } from "../../utils/linkActiveChecker";
 import { usePathname } from "next/navigation";
+import LanguageSwitcher from "../../components/LanguageSwitcher";
+import { useTranslations } from 'next-intl';
 
 const HeaderNavContent = () => {
+  const t = useTranslations("Common");
+
   return (
     <>
       <nav className="nav main-menu">
@@ -28,7 +32,7 @@ const HeaderNavContent = () => {
               isActiveParent(homeItems, usePathname()) ? "current" : ""
             } dropdown`}
           >
-            <span>Home</span>
+            <span>{t('Home')}</span>
             <div className="mega-menu">
               <div className="mega-menu-bar row pt-0">
                 {homeItems.map((item) => (
@@ -63,7 +67,7 @@ const HeaderNavContent = () => {
             } dropdown has-mega-menu`}
             id="has-mega-menu"
           >
-            <span>Find Jobs</span>
+            <span>{t('Find Jobs')}</span>
             <div className="mega-menu">
               <div className="mega-menu-bar row">
                 {findJobItems.map((item) => (
@@ -101,7 +105,7 @@ const HeaderNavContent = () => {
                 : ""
             } dropdown`}
           >
-            <span>Employers</span>
+            <span>{t('Employers')}</span>
             <ul>
               {employerItems.map((item) => (
                 <li className="dropdown" key={item.id}>
@@ -138,7 +142,7 @@ const HeaderNavContent = () => {
                 }
               >
                 <Link href="/employers-dashboard/dashboard">
-                  Employers Dashboard
+                  {t('Employers Dashboard')}
                 </Link>
               </li>
             </ul>
@@ -151,11 +155,9 @@ const HeaderNavContent = () => {
               usePathname()?.split("/")[1] === "candidates-dashboard"
                 ? "current"
                 : ""
-                ? "current"
-                : ""
             } dropdown`}
           >
-            <span>Candidates</span>
+            <span>{t('Candidates')}</span>
             <ul>
               {candidateItems.map((item) => (
                 <li className="dropdown" key={item.id}>
@@ -192,33 +194,12 @@ const HeaderNavContent = () => {
                 }
               >
                 <Link href="/candidates-dashboard/dashboard">
-                  Candidates Dashboard
+                  {t('Candidates Dashboard')}
                 </Link>
               </li>
             </ul>
           </li>
           {/* End Candidates menu items */}
-
-          <li
-            className={`${
-              isActiveParentChaild(blogItems, usePathname()) ? "current" : ""
-            } dropdown`}
-          >
-            <span>Blog</span>
-            <ul>
-              {blogItems.map((item, i) => (
-                <li
-                  className={
-                    isActiveLink(item.routePath, usePathname()) ? "current" : ""
-                  }
-                  key={i}
-                >
-                  <Link href={item.routePath}>{item.name}</Link>
-                </li>
-              ))}
-            </ul>
-          </li>
-          {/* End Blog menu items */}
 
           <li
             className={`${
@@ -228,7 +209,7 @@ const HeaderNavContent = () => {
                 : ""
             } dropdown`}
           >
-            <span>Pages</span>
+            <span>{t('Pages')}</span>
             <ul>
               {shopItems.map((item) => (
                 <li className="dropdown" key={item.id}>
@@ -270,6 +251,14 @@ const HeaderNavContent = () => {
             </ul>
           </li>
           {/* End Pages menu items */}
+
+          <li className="dropdown">
+            <span>{t('Language')}</span>
+            <ul>
+              <LanguageSwitcher />
+            </ul>
+          </li>
+          {/* End Language menu items */}
         </ul>
       </nav>
     </>

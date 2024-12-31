@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const CallToAction6 = () => {
   return (
-    <section className="call-to-action-three style-two">
+    <section className="call-to-action-three style-two" style={{backgroundColor:"#ffbe0b"}}>
       <div className="auto-container">
         <div className="outer-box">
           <div className="sec-title light">

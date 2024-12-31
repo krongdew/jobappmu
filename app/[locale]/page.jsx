@@ -1,5 +1,5 @@
 import Wrapper from "@/layout/Wrapper";
-import Home from "@/components/home-1";
+import Home from "@/components/home-9";
 
 export const metadata = {
   title: "Home-1 || Superio - Job Borad React NextJS Template",
