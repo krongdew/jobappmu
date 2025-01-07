@@ -26,74 +26,22 @@ const HeaderNavContent = () => {
     <>
       <nav className="nav main-menu">
         <ul className="navigation" id="navbar">
-          {/* current dropdown */}
+          {/* Home menu item */}
           <li
             className={`${
-              isActiveParent(homeItems, usePathname()) ? "current" : ""
-            } dropdown`}
+              usePathname() === "/" ? "current" : ""
+            }`}
           >
-            <span>{t('Home')}</span>
-            <div className="mega-menu">
-              <div className="mega-menu-bar row pt-0">
-                {homeItems.map((item) => (
-                  <div
-                    className="column col-lg-3 col-md-3 col-sm-12"
-                    key={item.id}
-                  >
-                    <ul>
-                      {item.items.map((menu, i) => (
-                        <li
-                          className={
-                            isActiveLink(menu.routePath, usePathname())
-                              ? "current"
-                              : ""
-                          }
-                          key={i}
-                        >
-                          <Link href={menu.routePath}>{menu.name}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <Link href="/">{t('Home')}</Link>
           </li>
-          {/* End homepage menu items */}
+          {/* End homepage menu item */}
 
           <li
             className={`${
-              isActiveParent(findJobItems, usePathname()) ? "current" : ""
-            } dropdown has-mega-menu`}
-            id="has-mega-menu"
+              usePathname() === "/job-list-v2" ? "current" : ""
+            }`}
           >
-            <span>{t('Find Jobs')}</span>
-            <div className="mega-menu">
-              <div className="mega-menu-bar row">
-                {findJobItems.map((item) => (
-                  <div
-                    className="column col-lg-3 col-md-3 col-sm-12"
-                    key={item.id}
-                  >
-                    <h3>{item.title}</h3>
-                    <ul>
-                      {item.items.map((menu, i) => (
-                        <li
-                          className={
-                            isActiveLink(menu.routePath, usePathname())
-                              ? "current"
-                              : ""
-                          }
-                          key={i}
-                        >
-                          <Link href={menu.routePath}>{menu.name}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <Link href="/job-list-v2">{t('Find Jobs')}</Link>
           </li>
           {/* End findjobs menu items */}
 

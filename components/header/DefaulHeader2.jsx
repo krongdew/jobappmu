@@ -5,8 +5,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import HeaderNavContent from "./HeaderNavContent";
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 const DefaulHeader2 = () => {
+  const t = useTranslations("Common");
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
@@ -53,9 +55,9 @@ const DefaulHeader2 = () => {
 
         <div className="outer-box">
           {/* <!-- Add Listing --> */}
-          <Link href="/candidates-dashboard/cv-manager" className="upload-cv">
-            Upload your CV
-          </Link>
+          {/* <Link href="/candidates-dashboard/cv-manager" className="upload-cv">
+          {t('UploadCV')}
+          </Link> */}
           {/* <!-- Login/Register --> */}
           <div className="btn-box">
             <a
@@ -64,13 +66,13 @@ const DefaulHeader2 = () => {
               data-bs-toggle="modal"
               data-bs-target="#loginPopupModal"
             >
-              Login / Register
+                {t('Login / Register')}
             </a>
             <Link
               href="/employers-dashboard/post-jobs"
               className="theme-btn btn-style-one"
             >
-              Job Post
+              {t('Job Post')}
             </Link>
           </div>
         </div>

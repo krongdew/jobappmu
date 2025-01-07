@@ -3,6 +3,7 @@ import CopyrightFooter from "../footer/common-footer/CopyrightFooter";
 import FooterContent4 from "../footer/FooterContent4";
 
 const Footer = () => {
+  
   return (
     <footer className="main-footer style-six">
       <div className="auto-container">
@@ -14,9 +15,9 @@ const Footer = () => {
                 <div className="logo">
                   <a href="#">
                     <Image
-                      width={154}
-                      height={50}
-                      src="/images/logo-2.svg"
+                      width={40}
+                      height={40}
+                      src="/images/favicon.png"
                       alt="brand"
                     />
                   </a>

@@ -5,6 +5,7 @@ import MobileMenu from "../../header/MobileMenu";
 import FilterJobsBox from "./FilterJobsBox";
 import JobSearchForm from "./JobSearchForm";
 import FilterSidebar from "./FilterSidebar";
+import Footer from "../../home-9/Footer";
 
 const index = () => {
   return (
@@ -63,7 +64,7 @@ const index = () => {
       </section>
       {/* <!--End Listing Page Section --> */}
 
-      <FooterDefault footerStyle="alternate5" />
+      <Footer />
       {/* <!-- End Main Footer --> */}
     </>
   );
