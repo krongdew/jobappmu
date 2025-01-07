@@ -1,25 +1,28 @@
 import Link from "next/link";
 import LoginWithSocial from "./LoginWithSocial";
+import { useTranslations } from 'next-intl';
 
 const FormContent = () => {
+  const t = useTranslations("Login");
+  
   return (
     <div className="form-inner">
-      <h3>Login to Superio</h3>
+      <h3>{t('Login to JobSphere')}</h3>
 
       {/* <!--Login Form--> */}
       <form method="post">
         <div className="form-group">
-          <label>Username</label>
-          <input type="text" name="username" placeholder="Username" required />
+          <label>{t('Email')}</label>
+          <input type="email" name="email" placeholder={t('Email')} required />
         </div>
         {/* name */}
 
         <div className="form-group">
-          <label>Password</label>
+          <label>{t('Password')}</label>
           <input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder={t('Password')}
             required
           />
         </div>
@@ -29,12 +32,12 @@ const FormContent = () => {
           <div className="field-outer">
             <div className="input-group checkboxes square">
               <input type="checkbox" name="remember-me" id="remember" />
-              <label htmlFor="remember" className="remember">
+              {/* <label htmlFor="remember" className="remember">
                 <span className="custom-checkbox"></span> Remember me
-              </label>
+              </label> */}
             </div>
             <a href="#" className="pwd">
-              Forgot password?
+            {t('Forgot password')}
             </a>
           </div>
         </div>
@@ -46,7 +49,7 @@ const FormContent = () => {
             type="submit"
             name="log-in"
           >
-            Log In
+            {t('LogIn')}
           </button>
         </div>
         {/* login */}
@@ -55,19 +58,19 @@ const FormContent = () => {
 
       <div className="bottom-box">
         <div className="text">
-          Don&apos;t have an account?{" "}
+        {t('Dont have an account')}{" "}
           <Link
             href="#"
             className="call-modal signup"
             data-bs-toggle="modal"
             data-bs-target="#registerModal"
           >
-            Signup
+            {t('Sign up')}
           </Link>
         </div>
 
         <div className="divider">
-          <span>or</span>
+          <span>{t('or')}</span>
         </div>
 
         <LoginWithSocial />

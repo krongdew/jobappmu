@@ -50,7 +50,17 @@
     "5": {
       "feedback": "สร้างความสัมพันธ์อันดี",
       "feedbackText": "สร้างความสัมพันธ์อันดีกับภาคธุรกิจ และส่งเสริมอัตราการจ้างงานเต็มเวลาเมื่อนักศึกษาจบการศึกษาต่อไป"
+    } 
+  },
+  "Login":{
+      "Login to JobSphere": "Login to JobSphere",
+      "Email":"Email",
+      "Password":"Password",
+      "Forgot password":"Forgot password",
+      "LogIn": "Sign in",
+      "Dont have an account" : "Don't have an account?",
+      "Sign up" : "Sign up",
+      "or" : "or",
+      "Login via" : "Log In via Mahidol Account"
     }
-    
-  }
 }

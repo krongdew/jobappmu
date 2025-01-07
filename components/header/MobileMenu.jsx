@@ -2,6 +2,7 @@ import Link from "next/link";
 import MobileSidebar from "./mobile-sidebar";
 import Image from "next/image";
 
+
 const MobileMenu = () => {
   return (
     // <!-- Main Header-->
@@ -14,9 +15,9 @@ const MobileMenu = () => {
               <div className="logo">
                 <Link href="/">
                   <Image
-                    width={154}
-                    height={50}
-                    src="/images/logo.svg"
+                    width={40}
+                    height={40}
+                    src="/images/favicon.png"
                     alt="brand"
                   />
                 </Link>
