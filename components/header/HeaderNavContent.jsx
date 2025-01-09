@@ -1,20 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import {
-  blogItems,
-  candidateItems,
-  employerItems,
-  findJobItems,
-  homeItems,
-  pageItems,
-  shopItems,
-} from "../../data/mainMenuData";
-import {
-  isActiveParent,
-  isActiveLink,
-  isActiveParentChaild,
-} from "../../utils/linkActiveChecker";
+// import {
+//   blogItems,
+//   candidateItems,
+//   employerItems,
+//   findJobItems,
+//   homeItems,
+//   pageItems,
+//   shopItems,
+// } from "../../data/mainMenuData";
+// import {
+//   isActiveParent,
+//   isActiveLink,
+//   isActiveParentChaild,
+// } from "../../utils/linkActiveChecker";
 import { usePathname } from "next/navigation";
 import LanguageSwitcher from "../../components/LanguageSwitcher";
 import { useTranslations } from 'next-intl';
@@ -45,7 +45,7 @@ const HeaderNavContent = () => {
           </li>
           {/* End findjobs menu items */}
 
-          <li
+          {/* <li
             className={`${
               isActiveParent(employerItems, usePathname()) ||
               usePathname()?.split("/")[1] === "employers-dashboard"
@@ -94,10 +94,10 @@ const HeaderNavContent = () => {
                 </Link>
               </li>
             </ul>
-          </li>
+          </li> */}
           {/* End Employers menu items */}
 
-          <li
+          {/* <li
             className={`${
               isActiveParent(candidateItems, usePathname()) ||
               usePathname()?.split("/")[1] === "candidates-dashboard"
@@ -146,10 +146,10 @@ const HeaderNavContent = () => {
                 </Link>
               </li>
             </ul>
-          </li>
+          </li> */}
           {/* End Candidates menu items */}
 
-          <li
+          {/* <li
             className={`${
               isActiveParentChaild(pageItems, usePathname()) ||
               isActiveParentChaild(shopItems[0].items, usePathname())
@@ -197,7 +197,7 @@ const HeaderNavContent = () => {
                 </li>
               ))}
             </ul>
-          </li>
+          </li> */}
           {/* End Pages menu items */}
 
           <li className="dropdown">
