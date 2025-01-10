@@ -1,29 +1,28 @@
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 const Block5 = () => {
+  const t = useTranslations('Block5');
+
   const blockContent = {
-    title: "Find Jobs with 3 easy steps",
-    descriptions: ` Sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt. Labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation.`,
+    title: t('title'),
+    descriptions: t('descriptions'),
     list: [
       {
         count: "1",
-        text: `Register an account to
-            start`,
+        text: t('list.item1'),
       },
       {
         count: "2",
-        text: `Explore over thousands of
-            resumes`,
+        text: t('list.item2'),
       },
       {
         count: "3",
-        text: `Find the most suitable
-            candidate`,
+        text: t('list.item3'),
       },
     ],
   };
+
   return (
     <section className="steps-section pt-0">
       <div className="auto-container">
@@ -40,7 +39,7 @@ const Block5 = () => {
               </figure>
               {/* <!-- Count Employers --> */}
               <div className="count-employers" data-aos="fade-up">
-                <span className="title">300k+ Employers</span>
+                <span className="title">{t('employersCount')}</span>
                 <figure className="image">
                   <Image
                     width={209}
